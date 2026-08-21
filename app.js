@@ -248,21 +248,27 @@ animatedGroups.forEach(config=>{
   const group = document.querySelector(config.selector);
   if(!group) return;
 
-  gsap.from([...group.children],{
-    x:config.x,
-    y:config.y,
-    scale:.94,
-    opacity:0,
-    filter:'blur(8px)',
-    duration:1,
-    stagger:config.stagger,
-    ease:'back.out(1.25)',
-    clearProps:'filter',
-    scrollTrigger:{
-      trigger:group,
-      start:'top 87%',
-      once:true
-    }
+  ScrollTrigger.create({
+    trigger:group,
+    start:'top 87%',
+    once:true,
+    onEnter:()=>gsap.fromTo([...group.children],{
+      x:config.x,
+      y:config.y,
+      scale:.94,
+      opacity:0,
+      filter:'blur(8px)'
+    },{
+      x:0,
+      y:0,
+      scale:1,
+      opacity:1,
+      filter:'blur(0px)',
+      duration:1,
+      stagger:config.stagger,
+      ease:'back.out(1.25)',
+      clearProps:'opacity,filter,transform'
+    })
   });
 });
 
