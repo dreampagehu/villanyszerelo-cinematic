@@ -60,10 +60,16 @@ const smoothstep = t => {
   return t*t*(3-2*t);
 };
 
-menu.addEventListener('click', () => header.classList.toggle('open'));
+menu.addEventListener('click', () => {
+  const isOpen = header.classList.toggle('open');
+  menu.setAttribute('aria-expanded',String(isOpen));
+});
 
 document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => header.classList.remove('open'));
+  link.addEventListener('click', () => {
+    header.classList.remove('open');
+    menu.setAttribute('aria-expanded','false');
+  });
 });
 
 addEventListener('scroll', () => {
@@ -211,7 +217,7 @@ preloadFrames();
 
 /* GENERAL REVEALS */
 const revealTargets = document.querySelectorAll(
-  '.intro>div, .intro-grid article, .section-head, .service-list article, .showcase-copy, .process-grid article, .project-grid figure, .manifesto>h2, .manifesto-grid article, .faq details, .contact-copy, .contact form'
+  '.reveal-block'
 );
 
 revealTargets.forEach(el=>{
@@ -228,24 +234,8 @@ revealTargets.forEach(el=>{
   });
 });
 
-/* SHOWCASE PARALLAX */
-gsap.fromTo('.showcase-image img',
-  {scale:1.08},
-  {
-    scale:1,
-    yPercent:4,
-    ease:'none',
-    scrollTrigger:{
-      trigger:'.showcase',
-      start:'top bottom',
-      end:'bottom top',
-      scrub:true
-    }
-  }
-);
-
 /* PROJECT HOVER */
-document.querySelectorAll('.project-grid figure').forEach(card=>{
+document.querySelectorAll('.project-gallery figure').forEach(card=>{
   const image = card.querySelector('img');
 
   card.addEventListener('mousemove',event=>{
@@ -275,6 +265,23 @@ document.querySelectorAll('.project-grid figure').forEach(card=>{
     });
   });
 });
+
+/* VIDEO: only decode while the film is near the viewport */
+const siteVideo = document.querySelector('.site-film video');
+
+if(siteVideo){
+  const videoObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        siteVideo.play().catch(()=>{});
+      }else{
+        siteVideo.pause();
+      }
+    });
+  },{rootMargin:'200px 0px'});
+
+  videoObserver.observe(siteVideo);
+}
 
 /* FORM DEMO */
 document.querySelector('#contactForm').addEventListener('submit',event=>{

@@ -4,499 +4,74 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#080908">
-  <meta name="description" content="Modern villanyszerelés, világítás, LED és okosotthon megoldások — prémium kivitelezéssel.">
+  <meta name="description" content="Teljes körű villanyszerelés Budapesten és környékén: alapszerelés, kábelezés, felújítás, hibakeresés és készülékbekötés.">
   <title>VOLT / ELECTRIC — Prémium villanyszerelés</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
-
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-
 <div class="grain" aria-hidden="true"></div>
-
 <header class="site-header">
-  <a class="brand" href="#top" aria-label="VOLT Electric">
-    <span class="brand-mark"></span>
-    <span>VOLT / ELECTRIC<small>SMART ELECTRICAL SYSTEMS</small></span>
-  </a>
-
-  <nav>
-    <a href="#services">Szolgáltatások</a>
-    <a href="#experience">Rendszer</a>
-    <a href="#process">Folyamat</a>
-    <a href="#projects">Megoldások</a>
-    <a href="#contact">Kapcsolat</a>
-  </nav>
-
-  <a class="nav-cta" href="#contact">Felmérést kérek</a>
-  <button class="menu" aria-label="Menü">☰</button>
+  <a class="brand" href="#top" aria-label="VOLT Electric kezdőlap"><span class="brand-mark"></span><span>VOLT / ELECTRIC<small>SMART ELECTRICAL SYSTEMS</small></span></a>
+  <nav aria-label="Fő navigáció"><a href="#services">Szolgáltatások</a><a href="#projects">Referenciák</a><a href="#process">Folyamat</a><a href="#about">Rólunk</a><a href="#contact">Kapcsolat</a></nav>
+  <a class="nav-cta" href="#contact">Ajánlatot kérek</a><button class="menu" type="button" aria-label="Menü" aria-expanded="false">☰</button>
 </header>
-
 <main id="top">
+  <section id="experience" class="experience"><div id="experienceStage" class="experience-stage">
+    <div class="frame-stack"><img class="story-frame" src="assets/frame-01.webp" alt="" draggable="false"><img class="story-frame" src="assets/frame-02.webp" alt="" draggable="false"><img class="story-frame" src="assets/frame-03.webp" alt="" draggable="false"><img class="story-frame" src="assets/frame-04.webp" alt="" draggable="false"><img class="story-frame" src="assets/frame-05.webp" alt="" draggable="false"><img class="story-frame" src="assets/frame-06.webp" alt="" draggable="false"></div>
+    <div class="hero-overlay"></div><div class="hero-darken" id="heroDarken"></div>
+    <div class="hero-copy" id="heroCopy"><p class="eyebrow">Teljes körű villanyszerelés</p><h1>A láthatatlan rendszer.<br><em>A látványos végeredmény.</em></h1><p class="hero-lead">Új építés, teljes felújítás és precíz hibajavítás — az első horonymarástól az utolsó kapcsolóig.</p><div class="hero-actions"><a href="#contact" class="button primary">Ajánlatot kérek ↗</a><a href="#services" class="button ghost">Miben segítünk?</a></div></div>
+    <div class="story-card" id="storyCard"><div id="storyNumber" class="story-number">01 / 06</div><div id="storyTitle" class="story-title">Üres tér</div><div id="storyText" class="story-text">Minden a tervezéssel kezdődik. A hely még üres, de a rendszer már fejben összeállt.</div></div>
+    <div class="hero-final" id="heroFinal"><p class="eyebrow">Komplett elektromos kivitelezés</p><h2>Amikor minden<br><em>pontosan a helyére kerül.</em></h2><p>Horonymarás. Csövezés. Kábelezés. Szerelvényezés. Bekötés. Egyetlen átgondolt rendszerben.</p><a href="#contact" class="button primary">Kérj helyszíni felmérést →</a></div>
+    <div class="scroll-cue" id="scrollCue"><span class="mouse"></span>Görgess lefelé</div><div class="story-progress"><div id="storyProgress"></div></div><div class="preloader" id="preloader"><div><span>Jelenet betöltése</span><i></i></div></div>
+  </div></section>
 
-  <!-- =====================================================
-       CINEMATIC SCROLL HERO
-  ====================================================== -->
-  <section id="experience" class="experience">
-    <div id="experienceStage" class="experience-stage">
+  <section class="trust-strip" aria-label="Fő előnyök"><div><span>01</span><strong>Teljes kivitelezés</strong><small>Az alapszereléstől az átadásig</small></div><div><span>02</span><strong>Átlátható ajánlat</strong><small>Előre egyeztetett munkafázisok</small></div><div><span>03</span><strong>Precíz munkaterület</strong><small>Rendezett, dokumentált kivitelezés</small></div><div><span>04</span><strong>Budapest és környéke</strong><small>Lakások, házak és üzlethelyiségek</small></div></section>
 
-      <div class="frame-stack">
-        <img class="story-frame" src="assets/frame-01.webp" alt="" draggable="false">
-        <img class="story-frame" src="assets/frame-02.webp" alt="" draggable="false">
-        <img class="story-frame" src="assets/frame-03.webp" alt="" draggable="false">
-        <img class="story-frame" src="assets/frame-04.webp" alt="" draggable="false">
-        <img class="story-frame" src="assets/frame-05.webp" alt="" draggable="false">
-        <img class="story-frame" src="assets/frame-06.webp" alt="" draggable="false">
-      </div>
+  <section class="opening section reveal-block"><div class="opening-title"><p class="eyebrow">Nem csak áramot vezetünk</p><h2>Megépítjük az otthon<br><em>biztonságos idegrendszerét.</em></h2></div><div class="opening-copy"><p class="lead">Egy jól kivitelezett elektromos rendszer évtizedekig észrevétlenül teszi a dolgát. Ehhez pontos tervezés, tiszta nyomvonalak és kompromisszummentes szerelés kell.</p><p>Új lakások és családi házak teljes alapszerelését, meglévő hálózatok felújítását, hibakeresését és konyhai készülékek szakszerű bekötését is vállaljuk.</p><a class="text-link" href="#about">Ismerj meg minket <span>↗</span></a></div></section>
 
-      <div class="hero-overlay"></div>
-      <div class="hero-darken" id="heroDarken"></div>
-
-      <div class="hero-copy" id="heroCopy">
-        <p class="eyebrow">Prémium villanyszerelés</p>
-        <h1>
-          A láthatatlan rendszer.<br>
-          <em>A látványos végeredmény.</em>
-        </h1>
-        <p class="hero-lead">
-          Görgess lefelé, és nézd meg, hogyan épül fel egy modern otthon
-          elektromos rendszere az üres tértől a kész élettérig.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="button primary">Felmérést kérek ↗</a>
-          <a href="#services" class="button ghost">Szolgáltatások</a>
-        </div>
-      </div>
-
-      <div class="story-card" id="storyCard">
-        <div id="storyNumber" class="story-number">01 / 06</div>
-        <div id="storyTitle" class="story-title">Üres tér</div>
-        <div id="storyText" class="story-text">
-          Minden a tervezéssel kezdődik. A hely még üres, de a rendszer már fejben összeállt.
-        </div>
-      </div>
-
-      <div class="hero-final" id="heroFinal">
-        <p class="eyebrow">Komplett elektromos kivitelezés</p>
-        <h2>
-          Amikor minden<br>
-          <em>pontosan a helyére kerül.</em>
-        </h2>
-        <p>
-          Hálózat. Szerelvények. Világítás. LED. Okosotthon.
-          Egyetlen átgondolt rendszerben.
-        </p>
-        <a href="#contact" class="button primary">Kezdjük el →</a>
-      </div>
-
-      <div class="scroll-cue" id="scrollCue">
-        <span class="mouse"></span>
-        Görgess lefelé
-      </div>
-
-      <div class="story-progress">
-        <div id="storyProgress"></div>
-      </div>
-
-      <div class="preloader" id="preloader">
-        <div>
-          <span>Jelenet betöltése</span>
-          <i></i>
-        </div>
-      </div>
+  <section id="services" class="services section"><div class="section-heading reveal-block"><div><p class="eyebrow">01 / Szolgáltatások</p><h2>Minden munkafázis.<br><em>Egy kézben.</em></h2></div><p>Teljes körű villanyszerelési megoldások új építéshez, felújításhoz és a mindennapi elektromos problémákhoz.</p></div>
+    <div class="service-grid">
+      <article class="service-card reveal-block"><span>01</span><h3>Alapszerelés</h3><p>Új lakások és családi házak elektromos rendszerének teljes kiépítése terv vagy helyszíni egyeztetés alapján.</p><ul><li>Kiállások kiosztása</li><li>Áramkörök megtervezése</li><li>Elosztó előkészítése</li></ul></article>
+      <article class="service-card reveal-block"><span>02</span><h3>Horonymarás & csövezés</h3><p>Pontos, logikus nyomvonalak kialakítása, védőcsövek és szerelvénydobozok szakszerű elhelyezése.</p><ul><li>Falhorony kialakítása</li><li>Védőcsövezés</li><li>Dobozolás</li></ul></article>
+      <article class="service-card reveal-block"><span>03</span><h3>Kábelezés</h3><p>Erős- és gyengeáramú vezetékek rendezett behúzása, jelölése és áramkörönkénti elosztása.</p><ul><li>Vezetékbehúzás</li><li>Körök feliratozása</li><li>TV és adat előkészítés</li></ul></article>
+      <article class="service-card reveal-block"><span>04</span><h3>Szerelvényezés</h3><p>Kapcsolók, dugaljak, lámpatestek és egyéb elektromos szerelvények pontos beépítése.</p><ul><li>Kapcsolók és konnektorok</li><li>Lámpák és LED-ek</li><li>Design szerelvénycsaládok</li></ul></article>
+      <article class="service-card reveal-block"><span>05</span><h3>Elosztó & mérőhely</h3><p>Biztosítéktábla kialakítása, védelmi készülékek bekötése és mérőhelyi munkák egyeztetés szerint.</p><ul><li>Elosztótábla</li><li>FI-relé és túlfeszültség-védelem</li><li>Áramkörök bekötése</li></ul></article>
+      <article class="service-card reveal-block"><span>06</span><h3>Teljes felújítás</h3><p>Régi alumínium vagy elavult hálózat bontása és korszerű, bővíthető rendszer kiépítése.</p><ul><li>Állapotfelmérés</li><li>Régi hálózat cseréje</li><li>Teljes újraszerelés</li></ul></article>
+      <article class="service-card reveal-block"><span>07</span><h3>Hibakeresés</h3><p>Zárlatok, leoldások, melegedő kötések és működésképtelen áramkörök műszeres feltárása.</p><ul><li>Hiba behatárolása</li><li>Biztonságos javítás</li><li>Terhelési problémák</li></ul></article>
+      <article class="service-card reveal-block"><span>08</span><h3>Készülékbekötés</h3><p>Főzőlapok, sütők, elszívók és más nagy teljesítményű konyhai berendezések szakszerű csatlakoztatása.</p><ul><li>Főzőlap és sütő</li><li>Fix bekötés</li><li>Terhelés ellenőrzése</li></ul></article>
     </div>
   </section>
 
-  <!-- =====================================================
-       INTRO
-  ====================================================== -->
-  <section class="intro section">
-    <div>
-      <p class="eyebrow">Modern elektromos rendszerek</p>
-      <h2>
-        Nem csak bekötjük.<br>
-        <em>Megtervezzük az élményt.</em>
-      </h2>
-    </div>
+  <section class="site-film reveal-block" aria-label="Villanyszerelés munka közben"><video autoplay muted loop playsinline preload="metadata" poster="assets/stock-renovation.jpg"><source src="assets/stock-site-work.mp4" type="video/mp4"></video><div class="film-shade"></div><div class="film-copy"><p class="eyebrow">Munka közben</p><h2>A fal mögött dől el,<br><em>mennyire lesz jó a végeredmény.</em></h2><p>A látható rész csak az utolsó tíz százalék. A minőség a pontos nyomvonalban, a rendezett kábelezésben és az ellenőrzött kötésekben van.</p><a href="#projects" class="button ghost">Nézd meg a munkáinkat</a></div><div class="film-badge"><i></i><span>Építkezési környezet<br><small>Pexels stock felvétel</small></span></div></section>
 
-    <div class="intro-copy">
-      <p>
-        Egy jó elektromos rendszerből szinte semmit nem látsz —
-        mégis minden pillanatban érzed, hogy jól működik.
-        A célunk pontosan ez: biztonság, funkcionalitás és esztétika egy rendszerben.
-      </p>
+  <section id="process" class="process section"><div class="section-heading reveal-block"><div><p class="eyebrow">02 / Folyamat</p><h2>Átlátható munka.<br><em>Az első hívástól.</em></h2></div><p>Minden projektet felméréssel és tiszta műszaki tartalommal indítunk, így pontosan tudod, mi történik a falakban.</p></div><div class="process-list">
+    <article class="reveal-block"><span>01</span><div><h3>Rövid egyeztetés</h3><p>Megbeszéljük az ingatlan típusát, a feladatot, a határidőt és a legfontosabb igényeket.</p></div><small>Telefon / e-mail</small></article><article class="reveal-block"><span>02</span><div><h3>Helyszíni felmérés</h3><p>Átnézzük a meglévő hálózatot, kijelöljük a kiállásokat és tisztázzuk a műszaki lehetőségeket.</p></div><small>Igényfelmérés</small></article><article class="reveal-block"><span>03</span><div><h3>Tételes ajánlat</h3><p>Átlátható munkafázisokkal és egyeztetett műszaki tartalommal készítjük el az ajánlatot.</p></div><small>Tervezhető költség</small></article><article class="reveal-block"><span>04</span><div><h3>Kivitelezés</h3><p>Horonymarás, csövezés, kábelezés, elosztó és szerelvényezés rendezett munkamenetben.</p></div><small>Folyamatos kontroll</small></article><article class="reveal-block"><span>05</span><div><h3>Ellenőrzés & átadás</h3><p>Átnézzük az elkészült rendszert, teszteljük a működést és közösen végigvesszük a használatot.</p></div><small>Biztonságos indulás</small></article>
+  </div></section>
 
-      <div class="intro-grid">
-        <article>
-          <span>01</span>
-          <h3>Precíz kivitelezés</h3>
-          <p>Átgondolt nyomvonalak, rendezett elosztás és dokumentált munka.</p>
-        </article>
+  <section id="projects" class="projects section"><div class="section-heading reveal-block"><div><p class="eyebrow">03 / Referenciák</p><h2>A nyers faltól<br><em>a kész élettérig.</em></h2></div><p>Építkezési részletek és kész enteriőrök — mert egy jó elektromos rendszernek mindkét fázisban rendezettnek kell lennie.</p></div><div class="project-gallery">
+    <figure class="project-tall reveal-block"><img src="assets/stock-renovation.jpg" alt="Villanyszerelő kábelezést épít ki felújítás közben" loading="lazy"><figcaption><span>Felújítás</span><strong>Kábelezés és kiállások</strong></figcaption></figure><figure class="reveal-block"><img src="assets/frame-02.webp" alt="Elektromos alapszerelés nyomvonalai" loading="lazy"><figcaption><span>Alapszerelés</span><strong>Csövezés és nyomvonalak</strong></figcaption></figure><figure class="reveal-block"><img src="assets/stock-panel-team.jpg" alt="Szakemberek elektromos elosztón dolgoznak" loading="lazy"><figcaption><span>Elosztó</span><strong>Rendszerépítés csapatban</strong></figcaption></figure><figure class="project-wide reveal-block"><img src="assets/frame-06.webp" alt="Kész modern nappali prémium világítással" loading="lazy"><figcaption><span>Kész rendszer</span><strong>Világítás és intelligens vezérlés</strong></figcaption></figure><figure class="reveal-block"><img src="assets/stock-electrician.jpg" alt="Villanyszerelő konnektort szerel" loading="lazy"><figcaption><span>Szerelvényezés</span><strong>Pontos befejező munkák</strong></figcaption></figure><figure class="reveal-block"><img src="assets/frame-04.webp" alt="Modern LED világítás és TV-fal" loading="lazy"><figcaption><span>Világítás</span><strong>LED, spot és hangulatfény</strong></figcaption></figure>
+  </div><p class="source-note">A bemutatott építkezési fotók stock illusztrációk; saját referenciaképekkel később cserélhetők.</p></section>
 
-        <article>
-          <span>02</span>
-          <h3>Prémium részletek</h3>
-          <p>Szerelvények, világítás és vezérlés, amelyek illenek az enteriőrhöz.</p>
-        </article>
+  <section id="quote" class="quote-section section"><div class="quote-intro reveal-block"><p class="eyebrow">04 / Ajánlat</p><h2>Nem sablonár.<br><em>Pontos műszaki tartalom.</em></h2><p>Minden ingatlan és hálózat más. Ezért látatlanban félrevezető négyzetméterár helyett a feladat alapján készítünk átlátható ajánlatot.</p></div><div class="quote-options">
+    <article class="reveal-block"><span class="quote-tag">Kisebb munkák</span><h3>Gyorsszerviz</h3><p class="quote-price">Egyedi ajánlat</p><ul><li>Hibakeresés és javítás</li><li>Főzőlap, sütő bekötés</li><li>Kapcsoló és dugalj csere</li><li>Kisebb bővítések</li></ul><a href="#contact" class="button ghost">Időpontot kérek</a></article><article class="featured reveal-block"><span class="quote-tag">Leggyakoribb</span><h3>Teljes felújítás</h3><p class="quote-price">Helyszíni felmérés</p><ul><li>Régi hálózat bontása</li><li>Új nyomvonal és kábelezés</li><li>Elosztó korszerűsítés</li><li>Teljes szerelvényezés</li></ul><a href="#contact" class="button primary">Felmérést kérek</a></article><article class="reveal-block"><span class="quote-tag">Új építés</span><h3>Komplett kivitelezés</h3><p class="quote-price">Tételes árajánlat</p><ul><li>Teljes alapszerelés</li><li>Erős- és gyengeáram</li><li>Világítás-előkészítés</li><li>Átadásig koordinálva</li></ul><a href="#contact" class="button ghost">Projektet indítok</a></article>
+  </div></section>
 
-        <article>
-          <span>03</span>
-          <h3>Jövőálló rendszer</h3>
-          <p>Olyan kialakítás, amely később is bővíthető okosotthon-funkciókkal.</p>
-        </article>
-      </div>
-    </div>
+  <section class="reviews section"><div class="reviews-head reveal-block"><div class="google-mark"><strong>G</strong><span>Google értékelések</span></div><h2>A jó munka után<br><em>a bizalom marad.</em></h2><p>A lenti szövegek vizuális minták. Publikálás előtt valódi, ellenőrizhető Google-véleményekre kell cserélni őket.</p></div><div class="review-grid">
+    <article class="review-card reveal-block"><div class="stars" aria-label="5 csillag">★★★★★</div><blockquote>„Pontos érkezés, tiszta munkavégzés és minden kiállást előre átbeszéltünk. A teljes lakás új hálózata átláthatóan készült el.”</blockquote><footer><span>KM</span><div><strong>Minta ügyfél</strong><small>Teljes lakásfelújítás</small></div><i>G</i></footer></article><article class="review-card reveal-block"><div class="stars" aria-label="5 csillag">★★★★★</div><blockquote>„A hibát gyorsan megtalálták, közben érthetően elmondták, mi okozta. Korrekt és professzionális hozzáállás.”</blockquote><footer><span>BT</span><div><strong>Minta ügyfél</strong><small>Hibakeresés</small></div><i>G</i></footer></article><article class="review-card reveal-block"><div class="stars" aria-label="5 csillag">★★★★★</div><blockquote>„Az új konyha minden gépét és világítását egy rendszerben kezelték. A végeredmény rendezett és nagyon igényes lett.”</blockquote><footer><span>NA</span><div><strong>Minta ügyfél</strong><small>Konyhai elektromos munkák</small></div><i>G</i></footer></article>
+  </div></section>
+
+  <section id="about" class="about section"><div class="about-image reveal-block"><img src="assets/stock-electrician.jpg" alt="Villanyszerelő precíz szerelési munkát végez" loading="lazy"><span>Precizitás a falban és azon kívül.</span></div><div class="about-copy reveal-block"><p class="eyebrow">05 / Rólunk</p><h2>Szakmai alaposság.<br><em>Emberi kommunikáció.</em></h2><p class="lead">Lakások, családi házak és kisebb üzleti terek elektromos kivitelezésével foglalkozunk Budapesten és környékén.</p><p>Hiszünk abban, hogy a jó villanyszerelés nem a gyors kötésekről szól. Előre gondolkodunk a terhelésről, a későbbi bővítésről, a világításról és arról is, hogyan használod majd a teret a hétköznapokban.</p><div class="about-values"><div><strong>Rendezett</strong><span>nyomvonalak és elosztók</span></div><div><strong>Átgondolt</strong><span>kiosztás és terhelés</span></div><div><strong>Egyeztetett</strong><span>munkafázisok és határidők</span></div><div><strong>Teljes körű</strong><span>kivitelezés egy kézben</span></div></div></div></section>
+
+  <section class="faq section"><div class="section-heading reveal-block"><div><p class="eyebrow">06 / Gyakori kérdések</p><h2>Amit érdemes<br><em>előre tisztázni.</em></h2></div></div><div class="faq-list"><details class="reveal-block"><summary>Mikor szükséges a teljes elektromos felújítás?<span>+</span></summary><p>Ha a hálózat elavult, alumínium vezetékkel készült, rendszeresen leold, melegednek a kötések, vagy már nem bírja a mai készülékek terhelését, érdemes állapotfelmérést kérni.</p></details><details class="reveal-block"><summary>Mit tartalmaz az alapszerelés?<span>+</span></summary><p>A kiállások és áramkörök kiosztását, horonymarást, dobozolást, védőcsövezést, kábelezést és az elosztó előkészítését az egyeztetett műszaki tartalom szerint.</p></details><details class="reveal-block"><summary>Vállaltok kisebb munkákat és hibakeresést is?<span>+</span></summary><p>Igen. Zárlat, leoldás, hibás dugalj, világítási probléma, főzőlap- vagy sütőbekötés esetén is kérhető időpont.</p></details><details class="reveal-block"><summary>Mennyi idő alatt készül el az ajánlat?<span>+</span></summary><p>A szükséges adatok és a helyszíni felmérés után a projekt méretétől függően készítjük el a tételes műszaki ajánlatot.</p></details></div></section>
+
+  <section id="contact" class="contact section"><div class="contact-copy reveal-block"><p class="eyebrow">07 / Kapcsolat</p><h2>Van egy projekted?<br><em>Beszéljük át.</em></h2><p>Írd le röviden az ingatlan típusát, a munkát és a tervezett időpontot. A következő lépés egy rövid egyeztetés.</p><div class="contact-info"><a href="tel:+36301234567">+36 30 123 4567</a><a href="mailto:hello@voltelectric.hu">hello@voltelectric.hu</a><span>Budapest és környéke</span></div><small class="demo-notice">A telefonszám és e-mail jelenleg mintaadat — élesítés előtt cserélendő.</small></div>
+    <form id="contactForm" class="contact-form reveal-block"><div class="form-heading"><span>Ajánlatkérés</span><small>Általában 1 munkanapon belül visszajelzünk</small></div><label>Név<input name="name" required autocomplete="name" placeholder="Hogy szólíthatunk?"></label><label>Telefonszám<input name="phone" type="tel" required autocomplete="tel" placeholder="+36 ..."></label><label>E-mail<input name="email" type="email" autocomplete="email" placeholder="email@pelda.hu"></label><label>Munka típusa<select name="project"><option value="">Válassz</option><option>Új építés / alapszerelés</option><option>Teljes elektromos felújítás</option><option>Hibakeresés / javítás</option><option>Főzőlap / sütő bekötés</option><option>Világítás / szerelvényezés</option><option>Egyéb villanyszerelés</option></select></label><label class="full">Projekt röviden<textarea name="message" rows="5" placeholder="Milyen ingatlanról és milyen munkáról van szó?"></textarea></label><label class="consent full"><input type="checkbox" required><span>Elfogadom, hogy az adataimat kapcsolatfelvétel céljából kezeljék.</span></label><button class="button primary full" type="submit">Ajánlatot kérek →</button><small class="form-note full">Az űrlap jelenleg bemutató módú; beküldéshez e-mail vagy űrlapkezelő integráció szükséges.</small></form>
   </section>
-
-  <!-- =====================================================
-       SERVICES
-  ====================================================== -->
-  <section id="services" class="services section dark-section">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">01 / Szolgáltatások</p>
-        <h2>
-          Minden, ami<br>
-          <em>áramot kap.</em>
-        </h2>
-      </div>
-
-      <p>
-        Új rendszer, felújítás vagy intelligens vezérlés:
-        a teljes elektromos kivitelezést egyetlen rendszerként kezeljük.
-      </p>
-    </div>
-
-    <div class="service-list">
-      <article>
-        <span class="service-index">01</span>
-        <div>
-          <h3>Teljes villanyszerelés</h3>
-          <p>Új építés és teljes elektromos hálózat kialakítása.</p>
-        </div>
-        <b>↗</b>
-      </article>
-
-      <article>
-        <span class="service-index">02</span>
-        <div>
-          <h3>Elektromos felújítás</h3>
-          <p>Régi hálózat korszerűsítése, új áramkörök és elosztók.</p>
-        </div>
-        <b>↗</b>
-      </article>
-
-      <article>
-        <span class="service-index">03</span>
-        <div>
-          <h3>Világítás & LED</h3>
-          <p>Spotok, rejtett fények, hangulatvilágítás és fényvezérlés.</p>
-        </div>
-        <b>↗</b>
-      </article>
-
-      <article>
-        <span class="service-index">04</span>
-        <div>
-          <h3>Okosotthon</h3>
-          <p>Világítás, árnyékolás és intelligens vezérlés egy rendszerben.</p>
-        </div>
-        <b>↗</b>
-      </article>
-
-      <article>
-        <span class="service-index">05</span>
-        <div>
-          <h3>Hibaelhárítás</h3>
-          <p>Hibakeresés, javítás és biztonsági problémák feltárása.</p>
-        </div>
-        <b>↗</b>
-      </article>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       SHOWCASE / LIGHTING
-  ====================================================== -->
-  <section class="showcase">
-    <div class="showcase-image">
-      <img src="assets/frame-06.webp" alt="Modern nappali intelligens világítással">
-      <div class="showcase-shade"></div>
-    </div>
-
-    <div class="showcase-copy">
-      <p class="eyebrow">02 / Világítás</p>
-      <h2>
-        A fény nem extra.<br>
-        <em>A tér része.</em>
-      </h2>
-      <p>
-        A világítás határozza meg, hogyan érzed magad egy helyiségben.
-        A funkcionális és hangulatvilágítást ezért már a tervezés elején együtt kezeljük.
-      </p>
-
-      <div class="specs">
-        <span><b>2700–4000K</b> hangolt fényhőmérséklet</span>
-        <span><b>DALI / KNX</b> vezérlésre előkészíthető</span>
-        <span><b>LED</b> rejtett és indirekt megoldások</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       PROCESS
-  ====================================================== -->
-  <section id="process" class="process section">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">03 / Folyamat</p>
-        <h2>
-          Kiszámítható<br>
-          <em>az első lépéstől.</em>
-        </h2>
-      </div>
-
-      <p>
-        A cél nem csak az, hogy kész legyen.
-        Hanem hogy közben is pontosan tudd, mi történik.
-      </p>
-    </div>
-
-    <div class="process-grid">
-      <article>
-        <span>01</span>
-        <h3>Felmérés</h3>
-        <p>Igények, helyszín, terhelés és műszaki lehetőségek átbeszélése.</p>
-      </article>
-
-      <article>
-        <span>02</span>
-        <h3>Tervezés</h3>
-        <p>Kiállások, áramkörök, világítás és későbbi bővíthetőség átgondolása.</p>
-      </article>
-
-      <article>
-        <span>03</span>
-        <h3>Kivitelezés</h3>
-        <p>Rendezett munkafolyamat, precíz szerelés és folyamatos ellenőrzés.</p>
-      </article>
-
-      <article>
-        <span>04</span>
-        <h3>Átadás</h3>
-        <p>Tesztelés, dokumentáció és a rendszer közös végigellenőrzése.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       PROJECTS
-  ====================================================== -->
-  <section id="projects" class="projects section dark-section">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">04 / Megoldások</p>
-        <h2>
-          Technikából<br>
-          <em>élettér.</em>
-        </h2>
-      </div>
-
-      <p>
-        Ugyanaz a rendszer másképp néz ki egy minimalista nappaliban,
-        egy családi házban vagy egy modern irodában.
-      </p>
-    </div>
-
-    <div class="project-grid">
-      <figure class="large">
-        <img src="assets/frame-06.webp" alt="Prémium nappali">
-        <figcaption>
-          <b>Prémium nappali</b>
-          <span>LED · spot · TV fal · smart control</span>
-        </figcaption>
-      </figure>
-
-      <figure>
-        <img src="assets/frame-04.webp" alt="Világítás és TV fal">
-        <figcaption>
-          <b>Világítási rendszer</b>
-          <span>Indirect LED · recessed spots</span>
-        </figcaption>
-      </figure>
-
-      <figure>
-        <img src="assets/frame-03.webp" alt="Szerelvények">
-        <figcaption>
-          <b>Szerelvények</b>
-          <span>Minimal switches · distribution</span>
-        </figcaption>
-      </figure>
-
-      <figure>
-        <img src="assets/frame-02.webp" alt="Elektromos kiépítés">
-        <figcaption>
-          <b>Elektromos kiépítés</b>
-          <span>Nyomvonal · kiállások · elosztás</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       WHY US
-  ====================================================== -->
-  <section class="manifesto section">
-    <p class="eyebrow">05 / Miért minket?</p>
-
-    <h2>
-      A jó villanyszerelésből<br>
-      <em>semmit nem kell észrevenned.</em>
-    </h2>
-
-    <div class="manifesto-grid">
-      <article>
-        <span>01</span>
-        <h3>Átlátható rendszer</h3>
-        <p>Rendezett elosztás, logikus áramkörök és egyértelmű dokumentáció.</p>
-      </article>
-
-      <article>
-        <span>02</span>
-        <h3>Biztonság</h3>
-        <p>A terheléshez, környezethez és szabványokhoz igazított kialakítás.</p>
-      </article>
-
-      <article>
-        <span>03</span>
-        <h3>Esztétika</h3>
-        <p>A technika nem rontja el az enteriőrt — beleolvad.</p>
-      </article>
-
-      <article>
-        <span>04</span>
-        <h3>Bővíthetőség</h3>
-        <p>Úgy tervezzük, hogy később se kelljen mindent újrakezdeni.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       FAQ
-  ====================================================== -->
-  <section class="faq section dark-section">
-    <div>
-      <p class="eyebrow">06 / GYIK</p>
-      <h2>
-        Amit érdemes<br>
-        <em>előre tudni.</em>
-      </h2>
-    </div>
-
-    <div class="faq-list">
-      <details>
-        <summary>Mikor érdemes teljes elektromos felújítást csinálni?</summary>
-        <p>Régi, bizonytalan állapotú hálózatnál, bővítés előtt, nagyobb felújítás során vagy amikor a jelenlegi rendszer már nem szolgálja ki az igényeket.</p>
-      </details>
-
-      <details>
-        <summary>Lehet később okosotthon-rendszert hozzáadni?</summary>
-        <p>Igen. Ha előre gondolkodunk, a hálózatot úgy lehet kialakítani, hogy a későbbi intelligens vezérlés sokkal egyszerűbb legyen.</p>
-      </details>
-
-      <details>
-        <summary>Segítetek a világítás megtervezésében?</summary>
-        <p>Igen. A spotok, LED-vonalak, kapcsolási csoportok és fényhőmérsékletek kialakítását együtt kezeljük az elektromos tervvel.</p>
-      </details>
-
-      <details>
-        <summary>Kapok dokumentációt az elkészült rendszerről?</summary>
-        <p>A projekt jellegétől függően dokumentáljuk az áramköröket, elosztást és a fontos műszaki részleteket.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       CONTACT
-  ====================================================== -->
-  <section id="contact" class="contact">
-    <div class="contact-copy">
-      <p class="eyebrow">07 / Kapcsolat</p>
-      <h2>
-        Beszéljük át<br>
-        <em>a projektet.</em>
-      </h2>
-
-      <p>
-        Írd le röviden, milyen ingatlanról és milyen munkáról van szó.
-        A következő lépés egy rövid egyeztetés és helyszíni felmérés.
-      </p>
-
-      <div class="contact-info">
-        <span>+36 30 123 4567</span>
-        <span>hello@voltelectric.hu</span>
-        <span>Budapest és környéke</span>
-      </div>
-    </div>
-
-    <form id="contactForm">
-      <label>
-        Név
-        <input required placeholder="Hogy szólíthatunk?">
-      </label>
-
-      <label>
-        Telefonszám
-        <input required placeholder="+36 ...">
-      </label>
-
-      <label>
-        E-mail
-        <input type="email" placeholder="email@pelda.hu">
-      </label>
-
-      <label>
-        Projekt típusa
-        <select>
-          <option>Válassz</option>
-          <option>Új villanyszerelés</option>
-          <option>Elektromos felújítás</option>
-          <option>Világítás / LED</option>
-          <option>Okosotthon</option>
-          <option>Hibaelhárítás</option>
-        </select>
-      </label>
-
-      <label class="full">
-        Rövid leírás
-        <textarea placeholder="Mi a feladat, mekkora az ingatlan, mikorra lenne aktuális?"></textarea>
-      </label>
-
-      <button class="button primary full" type="submit">Felmérést kérek →</button>
-    </form>
-  </section>
-
 </main>
-
-<footer>
-  <a class="brand" href="#top">
-    <span class="brand-mark"></span>
-    <span>VOLT / ELECTRIC<small>SMART ELECTRICAL SYSTEMS</small></span>
-  </a>
-
-  <p>Modern villanyszerelés. Prémium részletek. Átgondolt rendszerek.</p>
-  <small>© 2026 VOLT / ELECTRIC — demo website concept</small>
-</footer>
-
-<div id="toast" class="toast">Köszönjük! Hamarosan jelentkezünk.</div>
-
-<script src="app.js"></script>
-</body>
-</html>
+<footer class="site-footer"><div class="footer-main"><a class="brand" href="#top"><span class="brand-mark"></span><span>VOLT / ELECTRIC<small>SMART ELECTRICAL SYSTEMS</small></span></a><p>Teljes körű villanyszerelés az első horonytól az utolsó kapcsolóig.</p><a href="#contact" class="button ghost">Kérj ajánlatot</a></div><div class="footer-links"><div><strong>Oldalak</strong><a href="#services">Szolgáltatások</a><a href="#projects">Referenciák</a><a href="#about">Rólunk</a></div><div><strong>Kapcsolat</strong><a href="tel:+36301234567">+36 30 123 4567</a><a href="mailto:hello@voltelectric.hu">hello@voltelectric.hu</a><span>Budapest és környéke</span></div></div><div class="footer-bottom"><small>© 2026 VOLT / ELECTRIC</small><small>Stock média: Pexels · Demo weboldal</small><a href="#top">Vissza az elejére ↑</a></div></footer>
+<div id="toast" class="toast" role="status">Köszönjük! Az űrlap jelenleg bemutató módban működik.</div><script src="app.js"></script>
+</body></html>
