@@ -222,39 +222,61 @@ const revealTargets = document.querySelectorAll(
 
 revealTargets.forEach(el=>{
   gsap.from(el,{
-    y:42,
+    y:48,
+    scale:.975,
     opacity:0,
-    duration:.9,
-    ease:'power3.out',
+    filter:'blur(9px)',
+    duration:1.05,
+    ease:'expo.out',
+    clearProps:'filter',
     scrollTrigger:{
       trigger:el,
-      start:'top 88%',
+      start:'top 90%',
       once:true
     }
   });
 });
 
-[
-  '.service-lines',
-  '.process-flow',
-  '.review-cards',
-  '.faq-grid'
-].forEach(groupSelector=>{
-  const group = document.querySelector(groupSelector);
+const animatedGroups = [
+  {selector:'.service-lines',x:-28,y:12,stagger:.075},
+  {selector:'.process-flow',x:0,y:48,stagger:.12},
+  {selector:'.review-cards',x:0,y:52,stagger:.13},
+  {selector:'.faq-grid',x:0,y:32,stagger:.08}
+];
+
+animatedGroups.forEach(config=>{
+  const group = document.querySelector(config.selector);
   if(!group) return;
 
   gsap.from([...group.children],{
-    y:34,
+    x:config.x,
+    y:config.y,
+    scale:.94,
     opacity:0,
-    duration:.8,
-    stagger:.09,
-    ease:'power3.out',
+    filter:'blur(8px)',
+    duration:1,
+    stagger:config.stagger,
+    ease:'back.out(1.25)',
+    clearProps:'filter',
     scrollTrigger:{
       trigger:group,
-      start:'top 84%',
+      start:'top 87%',
       once:true
     }
   });
+});
+
+gsap.from('.process-flow i',{
+  scale:0,
+  rotate:-90,
+  duration:.55,
+  stagger:.13,
+  ease:'back.out(2)',
+  scrollTrigger:{
+    trigger:'.process-flow',
+    start:'top 78%',
+    once:true
+  }
 });
 
 gsap.fromTo('.film-copy',
