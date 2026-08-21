@@ -217,7 +217,7 @@ preloadFrames();
 
 /* GENERAL REVEALS */
 const revealTargets = document.querySelectorAll(
-  '.reveal-block'
+  '.reveal-block:not(.service-lines article):not(.process-flow article):not(.review-cards article):not(.faq-grid details)'
 );
 
 revealTargets.forEach(el=>{
@@ -234,37 +234,42 @@ revealTargets.forEach(el=>{
   });
 });
 
-/* PROJECT HOVER */
-document.querySelectorAll('.project-gallery figure').forEach(card=>{
-  const image = card.querySelector('img');
+[
+  '.service-lines',
+  '.process-flow',
+  '.review-cards',
+  '.faq-grid'
+].forEach(groupSelector=>{
+  const group = document.querySelector(groupSelector);
+  if(!group) return;
 
-  card.addEventListener('mousemove',event=>{
-    if(innerWidth < 800) return;
-
-    const r = card.getBoundingClientRect();
-    const x = (event.clientX-r.left)/r.width-.5;
-    const y = (event.clientY-r.top)/r.height-.5;
-
-    gsap.to(image,{
-      x:x*10,
-      y:y*8,
-      scale:1.055,
-      duration:.35,
-      overwrite:true
-    });
-  });
-
-  card.addEventListener('mouseleave',()=>{
-    gsap.to(image,{
-      x:0,
-      y:0,
-      scale:1,
-      duration:.5,
-      ease:'power2.out',
-      overwrite:true
-    });
+  gsap.from([...group.children],{
+    y:34,
+    opacity:0,
+    duration:.8,
+    stagger:.09,
+    ease:'power3.out',
+    scrollTrigger:{
+      trigger:group,
+      start:'top 84%',
+      once:true
+    }
   });
 });
+
+gsap.fromTo('.film-copy',
+  {y:30},
+  {
+    y:-30,
+    ease:'none',
+    scrollTrigger:{
+      trigger:'.site-film',
+      start:'top bottom',
+      end:'bottom top',
+      scrub:.5
+    }
+  }
+);
 
 /* VIDEO: only decode while the film is near the viewport */
 const siteVideo = document.querySelector('.site-film video');
