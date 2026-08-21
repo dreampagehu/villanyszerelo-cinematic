@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 const header = document.querySelector('.site-header');
 const menu = document.querySelector('.menu');
 const frames = [...document.querySelectorAll('.story-frame')];
+const frameStack = document.querySelector('.frame-stack');
 
 const heroCopy = document.querySelector('#heroCopy');
 const storyCard = document.querySelector('#storyCard');
@@ -51,7 +52,7 @@ const storySteps = [
 let target = 0;
 let current = 0;
 let activeStep = -1;
-let rafId;
+let rafId = null;
 
 const clamp = (v,a=0,b=1) => Math.min(b,Math.max(a,v));
 const smoothstep = t => {
@@ -110,11 +111,7 @@ function renderStory(p){
   const heroOut = smoothstep((p-.015)/.12);
   heroCopy.style.opacity = 1 - heroOut;
 
-  if(innerWidth > 760){
-    heroCopy.style.transform = `translateY(calc(-50% - ${heroOut*25}px))`;
-  }else{
-    heroCopy.style.transform = `translateY(${-heroOut*18}px)`;
-  }
+  heroCopy.style.transform = `translate(-50%,calc(-50% - ${heroOut*24}px))`;
 
   scrollCue.style.opacity = 1 - smoothstep((p-.02)/.09);
 
@@ -122,6 +119,11 @@ function renderStory(p){
   const base = Math.floor(seq);
   const next = Math.min(base + 1, frames.length - 1);
   const local = smoothstep(seq - base);
+
+  const scale = 1.032 - p*.018;
+  const x = (p-.5)*-5;
+  const y = (p-.5)*-2;
+  frameStack.style.transform = `scale(${scale}) translate3d(${x}px,${y}px,0)`;
 
   frames.forEach((frame,i)=>{
     let opacity = 0;
@@ -131,17 +133,6 @@ function renderStory(p){
     if(base === next && i === base) opacity = 1;
 
     frame.style.opacity = opacity;
-
-    const scale = 1.032 - p*.018;
-    const x = (p-.5)*-5;
-    const y = (p-.5)*-2;
-    frame.style.transform = `scale(${scale}) translate3d(${x}px,${y}px,0)`;
-
-    const blur = (i === base || i === next)
-      ? Math.sin(local*Math.PI)*.35
-      : 0;
-
-    frame.style.filter = `saturate(.98) contrast(1.02) blur(${blur}px)`;
   });
 
   const cardIn = smoothstep((p-.10)/.06);
@@ -174,13 +165,28 @@ ScrollTrigger.create({
   invalidateOnRefresh:true,
   onUpdate:self=>{
     target = self.progress;
+    startStoryLoop();
   }
 });
 
 function storyLoop(){
-  current += (target-current)*.085;
+  current += (target-current)*.14;
+
+  if(Math.abs(target-current) < .00015){
+    current = target;
+    renderStory(current);
+    rafId = null;
+    return;
+  }
+
   renderStory(current);
   rafId = requestAnimationFrame(storyLoop);
+}
+
+function startStoryLoop(){
+  if(rafId === null){
+    rafId = requestAnimationFrame(storyLoop);
+  }
 }
 
 async function preloadFrames(){
@@ -197,8 +203,6 @@ async function preloadFrames(){
 
   preloader.classList.add('done');
   renderStory(0);
-  cancelAnimationFrame(rafId);
-  storyLoop();
 
   setTimeout(()=>ScrollTrigger.refresh(),80);
 }
